@@ -1,0 +1,401 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Mulish', sans-serif;
+}
+
+:root {
+	--size: 20%;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+.App {
+	display: flex;
+	justify-content: right;
+}
+.sitebar {
+	width: var(--size);
+	height: 100vh;
+	background: #363740;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 33px;
+}
+.logo > p {
+	font-weight: 700;
+	font-size: 19px;
+	color: #a4a6b3;
+	opacity: 0.7;
+}
+.nav {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.list-item {
+	display: flex;
+	align-items: center;
+	padding: 10px 40px;
+	width: 100%;
+	height: 56px;
+}
+.nav-line {
+	width: 100%;
+	height: 0.1px;
+	background: #dfe0eb;
+}
+.list-item:hover::after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 56px;
+	background: #818496;
+	opacity: 0.2;
+	left: 0;
+	z-index: 1;
+}
+.list-item:hover::before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 3px;
+	height: 56px;
+	background: #dde2ff;
+	opacity: 0.8;
+	left: 0;
+	z-index: 2;
+}
+.nav-title {
+	font-weight: 400;
+	font-size: 16px;
+	color: #9fa2b4;
+	opacity: 0.4;
+	margin-left: 20px;
+}
+.nav-img {
+	color: #9fa2b4;
+	opacity: 0.4;
+}
+.list-item:hover .nav-title,
+.list-item:hover .nav-img {
+	color: #dde2ff;
+	opacity: 1;
+}
+
+.main {
+	width: 80%;
+	background: #f7f8fc;
+	padding: 28px 30px;
+    /* height: 100vh;
+    overflow-y: auto; */
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.header-title {
+	font-weight: 700;
+	font-size: 24px;
+	color: #252733;
+}
+.header-list {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+.header-list-item:last-child > img {
+	width: 40px;
+	height: 40px;
+}
+.header-list-item {
+	margin: 0 10px;
+}
+.header-list-item:last-child {
+	margin-right: 0;
+}
+.header-list-item:first-child {
+	margin-top: 3px;
+}
+
+.hero {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.card {
+	width: 230px;
+	height: 120px;
+	background: #ffffff;
+	border: 1px solid #dfe0eb;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+.card:hover {
+	border: 1px solid #3751ff;
+	cursor: pointer;
+}
+.card:hover .card-text,
+.card:hover .card-number {
+	color: #3751ff;
+}
+.card-text {
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	color: #9fa2b4;
+}
+.card-number {
+	font-weight: 700;
+	font-size: 37px;
+	text-align: center;
+	color: #252733;
+}
+
+.trend {
+	width: 100%;
+	height: 500px;
+	background: #ffffff;
+	border: 1px solid #dfe0eb;
+	border-radius: 8px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.trend-list {
+	list-style: none;
+	margin: 32px;
+	width: 65%;
+}
+.trend-list-item:first-child {
+	font-weight: 700;
+	font-size: 19px;
+	color: #252733;
+}
+.trend-list-item > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.trend-list-item > div > time {
+	font-weight: 400;
+	font-size: 12px;
+	color: #9fa2b4;
+}
+
+.trend-list-item > div > p {
+	font-weight: 600;
+	font-size: 12px;
+	color: #9fa2b4;
+	display: flex;
+	align-items: center;
+}
+
+.trend-list-item > div > p::before {
+	display: block;
+	content: '';
+	width: 15px;
+	border: 2px solid #3751ff;
+	border-radius: 5px;
+	margin-right: 3px;
+}
+.trend-list-item > div > p > span {
+	display: flex;
+	align-items: center;
+	margin-left: 30px;
+}
+.trend-list-item > div > p > span::before {
+	display: block;
+	content: '';
+	width: 15px;
+	border: 2px solid #dfe0eb;
+	border-radius: 5px;
+	margin-right: 3px;
+}
+
+.result-list {
+	width: 35%;
+	list-style: none;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.result-list-item {
+	border-left: 1px solid #dfe0eb;
+	border-bottom: 1px solid #dfe0eb;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.result-list-item:last-child {
+	border-bottom: none;
+}
+.result-list-item > h3 {
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	color: #9fa2b4;
+}
+
+.result-list-item > time {
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	color: #252733;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.ticket-card {
+	width: 49%;
+	height: 320px;
+	background: #ffffff;
+	border: 1px solid #dfe0eb;
+	border-radius: 8px;
+}
+.ticket-card > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 32px;
+	margin-top: 25px;
+}
+
+.ticket-card > div > h2 {
+	font-weight: 700;
+	font-size: 19px;
+	color: #252733;
+}
+
+.ticket-card > div > a {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 14px;
+	color: #3751ff;
+}
+.ticket-card > p {
+	font-weight: 400;
+	font-size: 12px;
+	color: #9fa2b4;
+	margin-left: 32px;
+}
+
+.ticket-list {
+	list-style: none;
+	margin-top: 34px;
+}
+.footer-li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #dfe0eb;
+	padding: 17px 32px;
+}
+.footer-li:last-child {
+	border-bottom: none;
+}
+.ticket-list > .footer-li > input {
+	display: none;
+}
+
+.footer-li > h3 {
+	font-weight: 600;
+	font-size: 14px;
+	color: #252733;
+}
+.ticket-number {
+	font-weight: 600;
+	font-size: 14px;
+	color: #9fa2b4;
+}
+
+.tasks-list {
+	list-style: none;
+	margin-top: 29px;
+}
+
+
+.checkbox {
+	border-radius: 50% !important;
+}
+.add-task {
+	width: 10px;
+	height: 10px;
+	color: rgba(159, 162, 180, 1);
+	font-weight: 600;
+	background: #f0f1f7;
+	padding: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+}
+
+.tasks-list > .footer-li:first-child > input {
+	display: none;
+}
+.tasks-list > .footer-li > h3{
+    position: absolute;
+    margin-left: 25px;
+}
+.tasks-list > .footer-li:first-child > h3 {
+	position: relative;
+	display: block;
+	margin-left: 0;
+	font-weight: 600;
+	font-size: 14px;
+	color: #c5c7cd;
+}
+
+.tasks-border {
+	font-weight: 700;
+	font-size: 11px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #fec400;
+	border-radius: 8px;
+	padding: 3px 7px;
+}
+
+.green {
+	background: #29cc97;
+}
+.default {
+	background: #f0f1f7;
+	color: #9fa2b4;
+}
