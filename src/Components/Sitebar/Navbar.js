@@ -1,6 +1,8 @@
+import { NavLink } from 'react-router-dom';
+
 const Overwiew = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/">
 			<svg
 				className='nav-img'
 				width='16'
@@ -13,14 +15,14 @@ const Overwiew = () => {
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Overview</p>
-		</li>
+			<p className='nav-title' >Overview</p>
+		</NavLink>
 	);
 };
 
 const Tickets = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/tickets">
 			<svg
 				className='nav-img'
 				width='16'
@@ -33,14 +35,14 @@ const Tickets = () => {
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Tickets</p>
-		</li>
+			<p className='nav-title'  >Tickets</p>
+		</NavLink>
 	);
 };
 
 const Ideas = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/ideas">
 			<svg
 				className='nav-img'
 				width='12'
@@ -53,14 +55,14 @@ const Ideas = () => {
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Ideas</p>
-		</li>
+			<p className='nav-title' >Ideas</p>
+		</NavLink>
 	);
 };
 
 const Contacts = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/contacts">
 			<svg
 				className='nav-img'
 				width='16'
@@ -73,14 +75,14 @@ const Contacts = () => {
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Contacts</p>
-		</li>
+			<p className='nav-title' >Contacts</p>
+		</NavLink>
 	);
 };
 
 const Agents = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/agents" >
 			<svg
 				className='nav-img'
 				width='14'
@@ -94,33 +96,33 @@ const Agents = () => {
 				/>
 			</svg>
 			<p className='nav-title'>Agents</p>
-		</li>
+		</NavLink>
 	);
 };
 
 const Articles = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/articles">
 			<svg
-				className='nav-img'
+				className="nav-img"
 				width='14'
 				height='16'
 				viewBox='0 0 14 16'
 				fill='none'
 				xmlns='http://www.w3.org/2000/svg'>
 				<path
-					d='M7 8C9.20938 8 11 6.20937 11 4C11 1.79063 9.20938 0 7 0C4.79063 0 3 1.79063 3 4C3 6.20937 4.79063 8 7 8ZM9.99375 9.01875L8.5 15L7.5 10.75L8.5 9H5.5L6.5 10.75L5.5 15L4.00625 9.01875C1.77812 9.125 0 10.9469 0 13.2V14.5C0 15.3281 0.671875 16 1.5 16H12.5C13.3281 16 14 15.3281 14 14.5V13.2C14 10.9469 12.2219 9.125 9.99375 9.01875Z'
+					d='M14 11.25V0.75C14 0.334375 13.6656 0 13.25 0H3C1.34375 0 0 1.34375 0 3V13C0 14.6562 1.34375 16 3 16H13.25C13.6656 16 14 15.6656 14 15.25V14.75C14 14.5156 13.8906 14.3031 13.7219 14.1656C13.5906 13.6844 13.5906 12.3125 13.7219 11.8313C13.8906 11.6969 14 11.4844 14 11.25ZM4 4.1875C4 4.08437 4.08437 4 4.1875 4H10.8125C10.9156 4 11 4.08437 11 4.1875V4.8125C11 4.91563 10.9156 5 10.8125 5H4.1875C4.08437 5 4 4.91563 4 4.8125V4.1875ZM4 6.1875C4 6.08437 4.08437 6 4.1875 6H10.8125C10.9156 6 11 6.08437 11 6.1875V6.8125C11 6.91563 10.9156 7 10.8125 7H4.1875C4.08437 7 4 6.91563 4 6.8125V6.1875ZM11.9187 14H3C2.44688 14 2 13.5531 2 13C2 12.45 2.45 12 3 12H11.9187C11.8594 12.5344 11.8594 13.4656 11.9187 14Z'
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Articles</p>
-		</li>
+			<p className='nav-title' >Articles</p>
+		</NavLink>
 	);
 };
 
 const Settings = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/settings">
 			<svg
 				className='nav-img'
 				width='16'
@@ -133,14 +135,14 @@ const Settings = () => {
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Settings</p>
-		</li>
+			<p className='nav-title' >Settings</p>
+		</NavLink>
 	);
 };
 
 const Subscription = () => {
 	return (
-		<li className='list-item'>
+		<NavLink className='list-item' to="/subscription">
 			<svg
 				className='nav-img'
 				width='12'
@@ -153,8 +155,10 @@ const Subscription = () => {
 					fill='currentColor'
 				/>
 			</svg>
-			<p className='nav-title'>Subscription</p>
-		</li>
+			<>
+			<p className='nav-title' >Subscription</p>
+			</>
+		</NavLink>
 	);
 };
 

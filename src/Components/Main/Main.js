@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Main = () =>{
     return(
         <main className="main">
-            <Header />
+            <Header title="Overwiew" />
             <Cards />
             <Trend />
             <Footer />

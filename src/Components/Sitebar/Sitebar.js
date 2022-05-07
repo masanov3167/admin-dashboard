@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import Logo from "./Logo";
 import {
 	Tickets,
@@ -14,7 +16,7 @@ const Sitebar = () =>{
     return (
         <div className='sitebar'>
 				<Logo />
-                <ol className='nav'>
+                <div className='nav'>
                     <Overwiew />
                     <Tickets />
                     <Ideas />
@@ -24,7 +26,7 @@ const Sitebar = () =>{
                     <span className='nav-line'></span>
                     <Settings />
                     <Subscription />
-                </ol>
+                </div>
 	    </div>
     )
 }

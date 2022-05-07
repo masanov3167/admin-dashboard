@@ -1,9 +1,9 @@
 import user from '../../Assets/Img/admin.png';
 
-const Header = () => {
+const Header = ({title}) => {
 	return (
 		<header className='header'>
-			<h1 className='header-title'>Overwiew</h1>
+			<h1 className='header-title'>{title}</h1>
 
 			<ol className='header-list'>
 				<li className='header-list-item'>
